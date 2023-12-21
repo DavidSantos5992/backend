@@ -1,0 +1,2 @@
+telnet localhost 8000
+GET / HTTP/1.1
