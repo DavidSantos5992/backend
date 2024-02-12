@@ -357,6 +357,16 @@ server.use(/^(?!\/(public|livros|autores|categorias)).*$/, (req, res, next) => {
   }
 })
 
+server.get('/public/docs', (req, res) => {
+  const meuHtml = `
+  <h1> Documentação da API</h1>
+
+
+  
+  `
+  res.status(200).contentType('text/html').send(meuHtml)
+})
+
 server.use(router)
 
 https.createServer(
